@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+void army();
+void navy();
+void airForce();
+
+int main() {
+
+	int in = 0;
+
+	printf("US Military Encryption Service\n");
+	printf("Please input your branch of service:\n");
+	printf("1-Army\t2-Navy\t3-Air Force\n");
+	scanf("%d",&in);
+
+	switch(in) {
+	case 1:
+		army();
+		break;
+	case 2:
+		navy();
+		break;
+	case 3:
+		airForce();
+		break;
+	default:
+		printf("Error, please enter a valid military branch.");
+		break;
+	}
+
+
+
+	return 0;
+}
+
+void army() {
+	printf("\nArmy code");
+}
+
+void navy() {
+	printf("\nNavy code");
+}
+
+void airForce() {
+	printf("\nAir Force code");
+}
