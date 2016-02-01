@@ -7,40 +7,46 @@ void airForce();
 int main() {
 
 	int in = 0;
+	int flag = 1;
 
-	printf("US Military Encryption Service\n");
-	printf("Please input your branch of service:\n");
-	printf("1-Army\t2-Navy\t3-Air Force\n");
-	scanf("%d",&in);
-
-	switch(in) {
-	case 1:
-		army();
-		break;
-	case 2:
-		navy();
-		break;
-	case 3:
-		airForce();
-		break;
-	default:
-		printf("Error, please enter a valid military branch.");
-		break;
+	while(flag) {
+		
+		printf("\nUS Military Encryption Service\n");
+		printf("Please input your branch of service:\n");
+		printf("0-Exit\t1-Army\t2-Navy\t3-Air Force\n:");
+		scanf("%d",&in);
+	
+		switch(in) {
+		case 0:
+			flag = 0;
+			break;
+		case 1:
+			army();
+			break;
+		case 2:
+			navy();
+			break;
+		case 3:
+			airForce();
+			break;
+		default:
+			printf("Error, please enter a valid military branch.\n");
+			break;
+		}
 	}
-
 
 
 	return 0;
 }
 
 void army() {
-	printf("\nArmy code");
+	printf("\nArmy code\n");
 }
 
 void navy() {
-	printf("\nNavy code");
+	printf("\nNavy code\n");
 }
 
 void airForce() {
-	printf("\nAir Force code");
+	printf("\nAir Force code\n");
 }
