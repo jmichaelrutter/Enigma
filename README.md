@@ -10,4 +10,4 @@ This doesn't work in Eclipse because of buffer issues, so I just use the command
 
 The first algorithm just adds 1 to each character, and the last character is set to the first character in the group
 
-The second algorithm splits the group of characters in half swtiches the position of the first and second halves.  Plus the special characters are swapped with some numbers and vice versa.
+The second algorithm splits the group of characters in half and swtiches the position of the first and second halves.  Plus the special characters are swapped with some numbers and vice versa.
