@@ -1,3 +1,10 @@
+/*
+*	encode.c
+*	J. Michael Rutter
+*	Last revised: 2/1/2016
+*
+*/
+
 #include <stdio.h>
 #include <conio.h>
 
@@ -120,5 +127,41 @@ void navy() {
 }
 
 void airForce() {
-	printf("\nAir Force code\n");
+	printf("\nAir Force encryption: Press '$' to exit\n:");
+	while(1) {
+		kbhit();
+		char b = getch();
+		//Encryption algorithm: Evens and Odds
+		if(b == '$') //EXIT CODE
+			break;
+		else if(b >= 48 && b <= 57) { //NUMBERS
+			if(b % 2)
+				printf("%c", b-1);
+			else
+				printf("%c", b+1);
+		}
+		else if(b >= 65 && b <= 90) { //UPPERCASE
+			if(b % 2)
+				printf("%c", b+1+32);
+			else
+				printf("%c", b-1);
+		}
+		else if(b >= 97 && b <= 122) { //LOWERCASE
+			if(b % 2)
+				printf("%c", b+1);
+			else
+				printf("%c", b-1-32);
+		}
+		else if(b == 32) //SPACE
+			printf("%c", 63);
+		else if(b == 33) //EXCLAMATION POINT
+			printf("%c", 46);
+		else if(b == 44) //COMMA
+			printf("%c", 44);
+		else if(b == 46) //PERIOD
+			printf("%c", 33);
+		else if(b == 63) //QUESTION MARK
+			printf("%c", 32);
+		else {}
+	}
 }
