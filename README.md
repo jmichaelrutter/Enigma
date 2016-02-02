@@ -2,8 +2,8 @@ Enigma
 
 This doesn't work in Eclipse because of buffer issues, so I just use the command prompt to compile.
 
-1. Download encode.c and put it in a folder.
-2. Google how to add MinGW\bin to your PATH environment variable.
+1. Google how to add MinGW\bin to your PATH environment variable.
+2. Download encode.c and put it in a folder.
 2. Open command prompt and navigate to that folder using "cd"
 3. gcc encode.c -o encode.exe
 4. encode.exe
