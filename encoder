@@ -148,9 +148,9 @@ void airForce() {
 		}
 		else if(b >= 97 && b <= 122) { //LOWERCASE
 			if(b % 2)
-				printf("%c", b+1);
+				printf("%c", b+1-32);
 			else
-				printf("%c", b-1-32);
+				printf("%c", b-1);
 		}
 		else if(b == 32) //SPACE
 			printf("%c", 63);
